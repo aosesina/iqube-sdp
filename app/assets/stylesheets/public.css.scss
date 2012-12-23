@@ -1,4 +1,23 @@
 // Place all the styles related to the public controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "bootstrap"
+@import "bootswatch/superhero/variables";
+// Amelia
+// Cerulean
+// Cosmo
+// Cyborg
+// Journal
+// Readable
+// Simplex
+// Slate
+// Spacelab
+// Spruce
+// Superhero
+@import "bootstrap";
+body { padding-top: 60px; }
+
+// Responsive styles go here in case you want them
+@import "bootstrap-responsive";
+
+// And finally bootswatch style itself
+@import "bootswatch/cerulean/bootswatch";

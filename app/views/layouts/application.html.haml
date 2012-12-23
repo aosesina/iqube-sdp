@@ -7,10 +7,12 @@
     = csrf_meta_tags
   %body
     %header
-      %nav.navbar
+      %nav.navbar.navbar-fixed-top
         %section.navbar-inner
-          = link_to "SDP Platform", :root, :class => :brand
-          %ul.nav.pull-right
-            %li.active
-              = link_to "Home", :root
-    = yield
+          .container
+            = link_to "SDP Platform", :root, :class => :brand
+            %ul.nav.pull-right
+              %li.active
+                = link_to "Home", :root
+    .container
+      = yield
