@@ -1,0 +1,25 @@
+= form_for @course do |f|
+  - if @course.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@course.errors.count, "error")} prohibited this course from being saved:"
+      %ul
+        - @course.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :code
+    = f.text_field :code
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :summary
+    = f.text_field :summary
+  .field
+    = f.label :price
+    = f.number_field :price
+  .field
+    = f.label :duration_in_weeks
+    = f.number_field :duration_in_weeks
+  .actions
+    = f.submit 'Save'

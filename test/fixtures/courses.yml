@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code: MyString
+  title: MyString
+  summary: MyString
+  price: 1
+  duration_in_weeks: 1
+
+two:
+  code: MyString
+  title: MyString
+  summary: MyString
+  price: 1
+  duration_in_weeks: 1

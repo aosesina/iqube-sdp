@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Code:
+  = @course.code
+%p
+  %b Title:
+  = @course.title
+%p
+  %b Summary:
+  = @course.summary
+%p
+  %b Price:
+  = @course.price
+%p
+  %b Duration in weeks:
+  = @course.duration_in_weeks
+
+= link_to 'Edit', edit_course_path(@course)
+\|
+= link_to 'Back', courses_path

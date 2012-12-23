@@ -1,4 +1,10 @@
 Sdp::Application.routes.draw do
+  resources :courses
+
+
+  resources :students
+
+
   get "public/index"
 
   get "public/about"
