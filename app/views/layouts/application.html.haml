@@ -9,7 +9,8 @@
     %header
       %nav.navbar
         %section.navbar-inner
-          %ul.nav
+          = link_to "SDP Platform", :root, :class => :brand
+          %ul.nav.pull-right
             %li.active
-              = link_to :root_path, "Home"
+              = link_to "Home", :root
     = yield
