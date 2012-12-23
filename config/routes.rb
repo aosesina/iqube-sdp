@@ -1,8 +1,10 @@
 Sdp::Application.routes.draw do
+  resources :student_courses
+
+
   devise_for :users
 
   resources :courses
-
 
   resources :students
 
@@ -12,6 +14,8 @@ Sdp::Application.routes.draw do
   get "public/about"
 
   get "public/help"
+  
+  match 'register' => 'public#register'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

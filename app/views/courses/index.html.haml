@@ -1,6 +1,6 @@
 %h1 Listing courses
 
-%table
+%table.table.table-stripped.table-bordered
   %tr
     %th Code
     %th Title
@@ -18,10 +18,10 @@
       %td= course.summary
       %td= course.price
       %td= course.duration_in_weeks
-      %td= link_to 'Show', course
-      %td= link_to 'Edit', edit_course_path(course)
-      %td= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to 'Show', course,:class=>"btn"
+      %td= link_to 'Edit', edit_course_path(course), :class=>"btn"
+      %td= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn"
 
 %br
 
-= link_to 'New Course', new_course_path
+= link_to 'New Course', new_course_path, :class=>"btn"
