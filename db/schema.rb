@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121224122241) do
+ActiveRecord::Schema.define(:version => 20121224122421) do
 
   create_table "courses", :force => true do |t|
     t.string   "code"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20121224122241) do
     t.boolean  "iquber"
     t.string   "name"
     t.string   "phone"
+    t.string   "status"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

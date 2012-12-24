@@ -12,6 +12,8 @@
         %td= user.name
         %td= user.email
         %td= user.phone
+        %td= user.iquber
+        %td= user.status
         %td
-          = link_to "Iquber", user.iquber
-          = link_to "Status", user.status
+          %icon.icon-edit
+            = link_to "edit", user.status, :class=>:btn

@@ -13,7 +13,12 @@
 // Spacelab
 // Spruce
 // Superhero
+
 @import "bootstrap";
+input{
+  width: 100%;
+  height: clear;
+}
 body { padding-top: 60px; }
 
 // Responsive styles go here in case you want them
@@ -22,10 +27,4 @@ body { padding-top: 60px; }
 // And finally bootswatch style itself
 @import "bootswatch/cyborg/bootswatch";
 
-input{
-  line-height: 2em;
-}
-// 
-// img{
-  // max-height: 120px;
-// }
+
