@@ -26,5 +26,20 @@ body { padding-top: 60px; }
 
 // And finally bootswatch style itself
 @import "bootswatch/cyborg/bootswatch";
-
+input, textarea, select, .uneditable-input{
+  border: 1px solid #bbb;
+  color: #fff;
+  width: 100%; 
+  padding: 10px;
+  height: auto !important;
+  margin-bottom: 15px;
+  @include box_sizing;  
+}
+@media (max-width: 480px) {
+  body{
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
 
