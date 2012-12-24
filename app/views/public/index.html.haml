@@ -1,4 +1,4 @@
-.hero-unit.row
+.well.row
   .span7
     %h1 
       SDP
@@ -19,10 +19,10 @@
   %ul.thumbnails
     - @courses.each do |course|
       %li.span3
-        %a{:href=>course, :class=>:thumbnail}
+        %a{:href=>course_path(course), :class=>:thumbnail}
           %img{:src=> course.image}
-          %b= course.title
-          = course.summary
+        %h3= course.title
+        %p= course.summary
 .row.well
   %ul.nav.nav-tabs
     %li.active= link_to "Profile", "#", :data=>{:toggle=>:tab}
