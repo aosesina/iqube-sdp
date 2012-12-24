@@ -12,6 +12,13 @@
           .container
             = link_to "SDP Platform", :root, :class => :brand
             %ul.nav.pull-right
+              - if user_signed_in?
+                %li.navbar-text
+                  signed in as 
+                  = current_user.email  
+                %li.navbar-divider
+                %li
+                  = link_to "sign out", destroy_user_session_path, :method=>:delete                
               %li.active
                 = link_to "Home", :root
     .container

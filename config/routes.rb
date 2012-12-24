@@ -12,6 +12,7 @@ Sdp::Application.routes.draw do
 
   get "public/help"
   
+  match 'users'=>'users#index'
   match 'register' => 'public#register'
 
   # The priority is based upon order of creation:

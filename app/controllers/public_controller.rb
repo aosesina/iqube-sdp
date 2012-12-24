@@ -1,6 +1,6 @@
 class PublicController < ApplicationController
   def index
-    @student= Student.new
+    @user= User.new
     @courses= Course.all
   end
 

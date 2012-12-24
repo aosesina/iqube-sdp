@@ -8,15 +8,26 @@
       %br
       = link_to "read more", :root, :class=>"btn btn-alert"
   .span3
-    %h3 SDP Highlights
-    %ul
-      %li= link_to "Distributed Community", :root
-      %li= link_to "24 Hour Virtual Office", :root
-      %li= link_to "Top Class Mentors", :root
     - if user_signed_in?
+      %h3 SDP Highlights
+      %ul
+        %li= link_to "Distributed Community", :root
+        %li= link_to "24 Hour Virtual Office", :root
+        %li= link_to "Top Class Mentors", :root
       = link_to "View Courses", new_user_registration_path, :class=>"btn btn-large btn-primary"
-    - else
-      = link_to "Register", new_user_registration_path, :class=>"btn btn-large btn-primary"
+    - else    
+      = form_for @user, :html =>{:class => "well"}, :url => new_user_session_path do |f| 
+        = f.label :email 
+        = f.email_field :email, :placehlder => "Please enter your email" 
+      
+        = f.label :password 
+        = f.password_field :password, :placehlder => "Please enter your password" 
+        .actions
+          = f.check_box :remember_me  
+          = f.label :remember_me     
+      
+        = f.submit "Log me in", :class => "btn"
+    
 .row.well
   %h3 Featured Courses
   %ul.thumbnails
