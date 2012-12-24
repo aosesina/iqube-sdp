@@ -14,3 +14,13 @@ test:
   pool: 5
   username: e911miri
   password: 
+
+production:
+  adapter:  postgresql
+  encoding: unicode
+  pool: 5
+  database: ddk0imc9giabmv
+  username: idbsezhkrxfzsp
+  password: Xx-eA4yybxLrr-SCxVYvhBAiBm
+  host: ec2-54-243-248-219.compute-1.amazonaws.com
+  port: 5432
