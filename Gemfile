@@ -6,6 +6,7 @@ gem 'bootswatch-rails'
 gem 'haml'
 gem 'haml-rails'
 gem 'devise'
+gem 'taps'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
