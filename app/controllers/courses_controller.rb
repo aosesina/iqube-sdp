@@ -1,5 +1,7 @@
+include CoursesHelper
 class CoursesController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :authenticate_iquber!
   # GET /courses
   # GET /courses.json
   def index
