@@ -13,7 +13,10 @@
       %li= link_to "Distributed Community", :root
       %li= link_to "24 Hour Virtual Office", :root
       %li= link_to "Top Class Mentors", :root
-    = link_to "Register", new_user_registration_path, :class=>"btn btn-large btn-primary"
+    - if user_signed_in?
+      = link_to "View Courses", new_user_registration_path, :class=>"btn btn-large btn-primary"
+    - else
+      = link_to "Register", new_user_registration_path, :class=>"btn btn-large btn-primary"
 .row.well
   %h3 Featured Courses
   %ul.thumbnails
@@ -23,9 +26,3 @@
           %img{:src=> course.image}
         %h3= course.title
         %p= course.summary
-.row.well
-  %ul.nav.nav-tabs
-    %li.active= link_to "Profile", "#", :data=>{:toggle=>:tab}
-    %li= link_to "Profile", "#", :data=>{:toggle=>:tab}
-    %div.tab-content#myTabContent
-      .tab-pane.active.in#home
