@@ -1,4 +1,4 @@
-= form_for @course do |f|
+= form_for @course, :multipart=>:true do |f|
   - if @course.errors.any?
     #error_explanation
       %h2= "#{pluralize(@course.errors.count, "error")} prohibited this course from being saved:"
@@ -21,5 +21,9 @@
   .field
     = f.label :duration_in_weeks
     = f.number_field :duration_in_weeks
+  .field
+    = f.label :image
+    = f.text_field :image
+    
   .actions
     = f.submit 'Save'

@@ -13,6 +13,19 @@
       %li= link_to "Distributed Community", :root
       %li= link_to "24 Hour Virtual Office", :root
       %li= link_to "Top Class Mentors", :root
-    = link_to "Register", :root, :class=>"btn btn-large btn-primary"
-.row.hero-unit
-  %h3 How does it work
+    = link_to "Register", new_user_registration_path, :class=>"btn btn-large btn-primary"
+.row.well
+  %h3 Featured Courses
+  %ul.thumbnails
+    - @courses.each do |course|
+      %li.span3
+        %a{:href=>course, :class=>:thumbnail}
+          %img{:src=> course.image}
+          %b= course.title
+          = course.summary
+.row.well
+  %ul.nav.nav-tabs
+    %li.active= link_to "Profile", "#", :data=>{:toggle=>:tab}
+    %li= link_to "Profile", "#", :data=>{:toggle=>:tab}
+    %div.tab-content#myTabContent
+      .tab-pane.active.in#home
