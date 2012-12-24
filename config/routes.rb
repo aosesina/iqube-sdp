@@ -1,7 +1,4 @@
 Sdp::Application.routes.draw do
-  resources :student_courses
-
-
   devise_for :users
 
   resources :courses

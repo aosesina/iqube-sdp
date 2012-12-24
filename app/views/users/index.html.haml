@@ -1,0 +1,17 @@
+%table.table.table-stripped.table-bordered
+  %caption All Users, Iqubers and Non Iqubers
+  %thead
+    %th Name
+    %th Email
+    %th Phone
+    %th Iquber
+    %th Status
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        %td= user.email
+        %td= user.phone
+        %td
+          = link_to "Iquber", user.iquber
+          = link_to "Status", user.status
