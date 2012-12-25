@@ -15,5 +15,8 @@
         %td= user.iquber
         %td= user.status
         %td
-          %icon.icon-edit
+          %ico.icon-edit
             = link_to "edit", user.status, :class=>:btn
+        %td
+          %icon.icon-edit
+            = link_to "approve", approve_path+"/#{user.id}", :class=>"btn delete_post", :confirm=> "are you sure?", :remote=>true
