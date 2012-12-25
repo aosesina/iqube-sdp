@@ -4,6 +4,12 @@ class UsersController < ApplicationController
   before_filter :authenticate_iquber!
   def index
     @users= User.all
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @users }
+      format.json { render xml: @users }
+      format.json { render csv: @users }
+    end
   end
 
   def approve
