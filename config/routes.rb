@@ -1,16 +1,20 @@
 Sdp::Application.routes.draw do
+  get "studentview/index"
+
   devise_for :users
 
   resources :courses
 
-  get "public/index"
-
-  get "public/about"
-
-  get "public/help"
   
-  match 'users'=>'users#index'
+  resources :users do
+    # member do
+      # get 'approve/:id'
+    # end
+  end
+  match 'approve/:id'=>'users#approve'
   match 'register' => 'public#register'
+  match 'about'=> 'public#about'
+  match 'help'=> 'public#help'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

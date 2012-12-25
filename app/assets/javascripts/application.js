@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+$('.delete_post').bind('ajax:success', function() {  
+    $(this).closest('tr').fadeOut();  
+}); 
