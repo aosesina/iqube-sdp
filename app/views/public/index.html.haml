@@ -14,7 +14,7 @@
         %li= link_to "Distributed Community", :root
         %li= link_to "24 Hour Virtual Office", :root
         %li= link_to "Top Class Mentors", :root
-      = link_to "View Courses", new_user_registration_path, :class=>"btn btn-large btn-primary"
+      = link_to "View Courses", studentview_path, :class=>"btn btn-large btn-primary"
     - else    
       = form_for @user, :html =>{:class => "well"}, :url => new_user_session_path do |f| 
         = f.label :email 
