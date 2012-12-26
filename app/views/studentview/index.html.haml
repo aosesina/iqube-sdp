@@ -1,2 +1,33 @@
-%h1 Studentview#index
-%p Find me in app/views/studentview/index.html.haml
+%table.table.table-bordered.table-stripped
+  %caption= current_user.name + "'s courses"
+  %thead
+    %th Course Code
+    %th Course Title
+    %th Date Started
+    %th status
+  %tbody
+    - @subscriptions.each do |sub|
+      %tr
+        %td= sub.course.code
+        %td= sub.course.title
+        %td
+          - if sub.startdate!=nil
+            sub.startdate 
+          -else 
+            not started    
+  
+%table.table.table-bordered.table-stripped
+  %caption The Following Courses are offered in the SDP
+  %thead
+    %th Course Code
+    %th Course Title
+    %th Description
+  %tbody
+    - @courses.each do |course|
+      %tr
+        %td= course.code
+        %td= course.title
+        %td= course.summary 
+
+.well
+  =link_to "Register new course", studentview_addcourse_path, class:"btn btn-primary btn-large"

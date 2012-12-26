@@ -1,0 +1,4 @@
+= form_for @subscription, :url=>register_path do |f|
+  = f.label :course, "What course do you want to apply for?"
+  = f.select :course, options_from_collection_for_select(@courses, "id", "title")
+  = f.submit class: :btn
