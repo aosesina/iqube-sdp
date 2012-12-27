@@ -1,4 +1,5 @@
 include UsersHelper
+
 class UsersController < ApplicationController
   before_filter :authenticate_user!
   before_filter :authenticate_iquber!
@@ -8,7 +9,7 @@ class UsersController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @users }
       format.json { render xml: @users }
-      format.json { render csv: @users }
+      format.json { send_data @users.to_csv }
     end
   end
 

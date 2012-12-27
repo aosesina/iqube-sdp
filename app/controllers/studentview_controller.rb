@@ -1,3 +1,4 @@
+
 include CoursesHelper
 class StudentviewController < ApplicationController
   before_filter :authenticate_student!
