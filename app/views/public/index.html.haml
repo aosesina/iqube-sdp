@@ -3,7 +3,7 @@
     %h1 
       SDP
       %small Skill Development Platform
-    %p.lead
+    %p
       iQubeSDP is a Skill Development Platform that employs a coaching based Training / Learning style to help and guide...
       %br
       = link_to "read more", :root, :class=>"btn btn-alert"
@@ -28,13 +28,29 @@
       
         = f.submit "Log me in", :class => "btn"
         = link_to "register", new_user_registration_path, :class=>"btn btn-primary"
-    
+.row.navbar.navbar-inverse
+  .navbar-inner.container
+    %ul.nav
+      %li= link_to "Android Development"
+      %li= link_to "User Experience Design"
+      %li= link_to "Mobile Development"
+      %li= link_to "Nokia Qt"
+      %li= link_to "Web Architecture"
+      %li= link_to "Linux/Unix Foundation"
+      %li= link_to "Graphs and Algorithms"
+
 .row.well
-  %h3 Featured Courses
-  %ul.thumbnails
-    - @courses.each do |course|
-      %li.span3
-        %a{:href=>course_path(course), :class=>:thumbnail}
-          %img{:src=> course.image}
-        %h3= course.title
-        %p= course.summary
+  %h3.page-header 
+    What makes SDP especially for you?
+    %small What packages enhances knowledge transfer in the SDP platform
+  .span4
+    %h4 
+      The 24 hour Virtual Office
+      %small 99.98% uptime
+    %p IQube ensures a working office relationship across timezones and continents. Its virtual office have been proven and tested to be an efficient method of transfering knowledge to Individuals
+  .span3
+    %h4 SDP development Server
+    %p IQube ensures a working office relationship across timezones and continents. Its virtual office have been proven and tested to be an efficient method of transfering knowledge to Individuals
+  .span4
+    %h3 The Iqubebase Community
+    %p IQube ensures a working office relationship across timezones and continents. Its virtual office have been proven and tested to be an efficient method of transfering knowledge to Individuals
