@@ -16,7 +16,7 @@
         %li= link_to "Top Class Mentors", :root
       = link_to "View Courses", studentview_path, :class=>"btn btn-large btn-primary"
     - else    
-      = form_for @user, :html =>{:class => "well"}, :url => new_user_session_path do |f| 
+      = form_for @user, :html =>{:class => "well"}, :url => new_user_session_path do |f|
         = f.label :email 
         = f.email_field :email, :placehlder => "Please enter your email" 
       
